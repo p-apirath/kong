@@ -92,7 +92,7 @@ end
 for _, strategy in helpers.each_strategy() do
 for _, policy in ipairs({"local", "cluster", "redis"}) do
 
-describe(fmt("#flaky Plugin: response-ratelimiting (access) with policy: #%s [#%s]", policy, strategy), function()
+describe(fmt("flaky Plugin: response-ratelimiting (access) with policy: #%s [#%s]", policy, strategy), function()
 
   lazy_setup(function()
     local bp = init_db(strategy, policy)
@@ -495,7 +495,7 @@ describe(fmt("#flaky Plugin: response-ratelimiting (access) with policy: #%s [#%
   end)
 end)
 
-describe(fmt("#flaky Plugin: response-ratelimiting (expirations) with policy: #%s [#%s]", policy, strategy), function()
+describe(fmt("flaky Plugin: response-ratelimiting (expirations) with policy: #%s [#%s]", policy, strategy), function()
 
   lazy_setup(function()
     local bp = init_db(strategy, policy)
@@ -554,7 +554,7 @@ describe(fmt("#flaky Plugin: response-ratelimiting (expirations) with policy: #%
   end)
 end)
 
-describe(fmt("#flaky Plugin: response-ratelimiting (access - global for single consumer) with policy: #%s [#%s]", policy, strategy), function()
+describe(fmt("flaky Plugin: response-ratelimiting (access - global for single consumer) with policy: #%s [#%s]", policy, strategy), function()
 
   lazy_setup(function()
     local bp = init_db(strategy, policy)
@@ -603,7 +603,7 @@ describe(fmt("#flaky Plugin: response-ratelimiting (access - global for single c
   end)
 end)
 
-describe(fmt("#flaky Plugin: response-ratelimiting (access - global) with policy: #%s [#%s]", policy, strategy), function()
+describe(fmt("flaky Plugin: response-ratelimiting (access - global) with policy: #%s [#%s]", policy, strategy), function()
 
   lazy_setup(function()
     local bp = init_db(strategy, policy)
@@ -660,7 +660,7 @@ describe(fmt("#flaky Plugin: response-ratelimiting (access - global) with policy
   end)
 end)
 
-describe(fmt("#flaky Plugin: response-ratelimiting (fault tolerance) with policy: #%s [#%s]", policy, strategy), function()
+describe(fmt("flaky Plugin: response-ratelimiting (fault tolerance) with policy: #%s [#%s]", policy, strategy), function()
   if policy == "cluster" then
     local bp, db
 
